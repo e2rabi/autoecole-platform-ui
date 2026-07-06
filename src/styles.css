@@ -39,6 +39,146 @@ body {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
 }
+
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(20, 33, 61, 0.85), rgba(14, 24, 39, 0.9)),
+    url("/auto-ecole-bg.svg") center/cover no-repeat;
+}
+
+.login-card {
+  width: min(980px, 100%);
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.login-panel {
+  padding: 42px;
+}
+
+.login-form-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-illustration-panel {
+  background:
+    linear-gradient(135deg, rgba(241, 190, 72, 0.16), rgba(62, 110, 147, 0.36)),
+    url("/auto-ecole-bg.svg") center/cover no-repeat;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.brand-block .brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  color: var(--asphalt);
+  background: var(--yellow);
+}
+
+.brand-block .brand-name {
+  color: var(--asphalt);
+}
+
+.login-form-panel h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: var(--asphalt);
+}
+
+.login-form-panel p {
+  margin: 0 0 28px;
+  color: var(--steel);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.field input {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.field input:focus {
+  outline: 2px solid rgba(241, 190, 72, 0.35);
+  border-color: var(--yellow);
+}
+
+.login-btn {
+  margin-top: 8px;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--asphalt);
+  background: var(--yellow);
+  transition: transform 0.15s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+}
+
+.login-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.login-error {
+  border: 1px solid rgba(212, 84, 74, 0.2);
+  background: rgba(212, 84, 74, 0.08);
+  color: var(--red);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+@media (max-width: 840px) {
+  .login-card {
+    grid-template-columns: 1fr;
+  }
+
+  .login-illustration-panel {
+    min-height: 220px;
+  }
+}
 h1,
 h2,
 h3,
